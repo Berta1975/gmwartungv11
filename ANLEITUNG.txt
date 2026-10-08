@@ -1,0 +1,70 @@
+GM WARTUNGSAPP (PWA) - EINRICHTUNG  |  Version 1.4-GM
+
+Dateien (alle im selben Ordner, keine Unterordner):
+index.html, manifest.webmanifest, sw.js, icon-192.png, icon-512.png,
+apple-touch-icon.png, vorlage.json
+
+1. Veröffentlichen (GitHub Pages, kostenlos)
+   - Konto auf github.com anlegen, neues Repository (Public).
+   - "Add file > Upload files": alle 6 Dateien hochladen, "Commit changes".
+   - Settings > Pages > Branch "main", Ordner "/ (root)" > Save.
+   - Adresse: https://DEINNAME.github.io/REPO/
+   - Die Icons (icon-*.png, apple-touch-icon.png) können durch eigene
+     Bilder gleichen Namens und gleicher Größe ersetzt werden.
+
+2. Auf Geräten einrichten
+   - iPad/iPhone: Adresse in SAFARI öffnen > Teilen > "Zum Home-Bildschirm".
+   - Windows/Mac: Chrome oder Edge > Menü > "Seite als App installieren".
+   - Einmal mit Internet öffnen, danach läuft die App auch offline.
+   - Eine ausführliche Anleitung steckt in der App (Button "Anleitung öffnen").
+
+3. Firma einrichten (einmalig, Verwaltung)
+   - In der App "Vorlage bearbeiten" öffnen und eintragen:
+     Firmendaten (Firma, Adresse, Telefon, E-Mail), Logo (am besten PNG mit
+     transparentem Hintergrund), Kopfzeile, Fußzeile (z. B. Geschäftsführer,
+     Handelsregister, Steuernummer, Bankverbindung), Anlagentypen und
+     Prüfpunkte.
+   - "Vorlage sichern" erzeugt eine neue vorlage.json. Diese bei GitHub
+     hochladen (ersetzt die alte) und "Commit changes". Alle Techniker
+     erhalten die Änderung automatisch, sobald sie die App mit Internet
+     öffnen. Ausgefüllte Protokolle auf den Geräten bleiben erhalten.
+
+4. Funktionen
+   - Mehrere Anlagentypen pro Protokoll, Prüfpunkte, Fotos, Unterschrift.
+   - PDF (A4) speichern/teilen (iPad: Teilen-Menü, z. B. OneDrive/Dateien),
+     auf Windows/Mac über "PDF / Drucken".
+   - Kundenvorlagen: ausgefülltes Protokoll als Vorlage für das Folgejahr
+     speichern; Sicherung als Datei möglich.
+
+
+---
+UPDATES (Ablauf für die Verwaltung)
+---
+Die App aktualisiert sich ab dieser Version automatisch. Weder der
+Zwischenspeicher noch das Home-Bildschirm-Symbol müssen gelöscht
+oder neu angelegt werden. Gespeicherte Protokolle, Fotos und
+Kundenvorlagen bleiben bei Updates erhalten.
+
+So erstellst du ein Update:
+1. Dateien ändern (meist index.html).
+2. In sw.js die Zeile "var VERSION='...'" und in index.html die
+   Zeile "var APP_VERSION='...'" hochzählen (beide gleich, z. B.
+   2026-11-15a). Dadurch erscheint auch bei bereits geöffneten
+   Apps der Hinweis "Neue Version verfügbar".
+3. Bei GitHub hochladen (Dateien ersetzen) und "Commit changes".
+4. GitHub braucht 1-2 Minuten. Danach genügt es, wenn die Techniker
+   die App mit Internet öffnen. Sie laden dann sofort die neue
+   Version. Ist die App gerade geöffnet, erscheint unten "Neue
+   Version verfügbar" und ein Tipp auf "Jetzt aktualisieren" genügt.
+5. Die Versionsnummer steht in der App unter "Anleitung öffnen"
+   ganz unten (praktisch für Rückfragen).
+
+Einmalig beim Wechsel auf diese Version: Die App zweimal mit
+Internet öffnen. Ab dann gilt der automatische Ablauf.
+
+Nur das Symbol selbst (Bild oder Name im manifest/Icons) wird von
+iOS nicht automatisch erneuert. Ändert sich das Icon, muss das
+Symbol einmal gelöscht und neu hinzugefügt werden.
+
+Offline: Ohne Internet startet die App mit der zuletzt geladenen
+Version. Bei schlechtem Netz wartet sie maximal ca. 3-4 Sekunden.
